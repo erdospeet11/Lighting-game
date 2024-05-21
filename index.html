@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Villanyjáték</h2>
+    <div class="row">
+        <article class="green">
+            <h4>Játék indítása:</h4>
+            <form id="myform">
+                <input type="text" id="name" placeholder="Játékosnév:" style="margin-bottom: 10px;"><br>
+                <input type="radio" id="konnyu" value="7x7 Könnyű" name="valaszto">7x7 Könnyű<br>
+                <input type="radio" id="halado" value="7x7 Haladó" name="valaszto">7x7 Haladó<br>
+                <input type="radio" id="extrem" value="10x10 Extrém" name="valaszto">10x10 Extrém<br>
+                <input type="button" id="mehet" value="Mehet" class="buttonn">
+            </form>
+            <h4>Korábbi befejezett játékok:</h4>
+            <ul id="befejezett_jatekok">
+            </ul>
+
+        </article>
+        <div class="red">
+            <div id="eredmenyjelzo" style="color: green; text-align: center;"></div>
+            <h4>Játéktér:</h4>
+            <div id="ora" class="watch" style="visibility: hidden;">
+                <div id="stopwatch">
+                    00:00:00
+                </div>
+            </div>
+            <div id="jatekosnev"></div>
+            <div id="score">Gratulálok, megfejtetted!</div>
+            <table id="tabla" style="visibility: visible;"></table>
+            <div id="jatekos">Játékos neve:</div>
+            <input type="button" id="kilepes" value="Kilépés" class="buttonn">
+            <input type="button" id="ujrakezdes" value="Újrakezdés" style="visibility: hidden;" class="buttonn">
+        </div>
+    </div>
+    <footer>
+        <h2>Történetünk:</h2>
+        <div>
+            <p style="float: right; vertical-align: text-top;"><img src="motto.png" height="200px" width="200px"></p>
+            <p>Nekeresdországban Nevenincs királynak egyik szeme sír, a másik nevet. Nevet, mert végre elkészült a hatalmas kacsalábon forgó palotája, sok-sok tágas szobával és folyosóval. Ugyanakkor sír is, mert ezeket a helyiségeket be kell világítani és melegen kell tartani, azonban az aktuális rezsiemelkedés őt is érinti. Itt az ideje tehát elgondolkodni, hogy pontosan hová is helyezzünk el villanykörtéket, hogy minden megfelelően be legyen világítva; ugyanakkor csak oda helyezzünk el izzót, ahol ténylegesen szükség is van rá.</p>
+        </div>
+        <h2>A játék leírása:</h2>
+        <ul>
+            <li>A királynak négyzet alapú szobái vannak, amelyek fekete és fehér cellákból állnak.</li>
+            <li>A fehér cellákba villanykörtéket lehet elhelyezni.</li>
+            <li>A villanykörtékből a fény átlósan nem terjed, csak az adott sor és oszlop mentén.</li>
+            <li>A fekete cellákon valamilyen tereptárgy van, ami akadályozza a fény terjedését.</li>
+            <li>A fekete cellák opcionálisan egy egész számot is tartalmazhatnak 0-tól 4-ig. Ez azt jelzi, hogy hány szomszédos (alul, felül, jobbra, balra) cella tartalmaz villanykörtét. Ha van ilyen szám, akkor be kell tartani!</li>
+            <li>Két villanykörte soha nem világíthatja meg egymást!</li>
+            <li>A játék célja a villanykörtéket úgy elhelyezni, hogy minden fehér cellát megvilágítsanak.</li>
+            <li>A játékot egy játékos játssza, amíg meg nem oldja a rejtvényt, tehát több játékos egyidejű kezeléséről vagy körökre osztásról nem kell gondoskodni.
+            </li>
+        </ul>
+        
+    </footer>
+</body>
+</html>
